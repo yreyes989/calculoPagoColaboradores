@@ -7,7 +7,7 @@ class PruebaCalculoPago(unittest.TestCase):
         def testCalculoPagoEvaluarCantidadEmpleado(self):
             calculoPagoService = CalculoPagoService()
             resultado = calculoPagoService.procesarPagoEmpleado()
-            self.assertEqual(len(resultado), 3)
+            self.assertEqual(len(resultado), 6)
 
         def testCalculoPagoEvaluarPagoRENE(self):
             calculoPagoService = CalculoPagoService()
@@ -23,8 +23,6 @@ class PruebaCalculoPago(unittest.TestCase):
             calculoPagoService = CalculoPagoService()
             resultado = calculoPagoService.procesarPagoEmpleado()
             self.assertEqual(resultado[2].totalPago, 275)
-             
-        
-# if __name__ == '__main__':
+
 def executeTest():
     unittest.main()
